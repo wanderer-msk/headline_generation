@@ -14,7 +14,7 @@ def tokenize_text(tokenizer, text):
                       max_length=512,
                       return_tensors="pt")
 
-    return input["input_ids"].unsqueeze(0)
+    return input["input_ids"]
 
 model, tokenizer = load_model_and_tokenizer()
 
