@@ -22,6 +22,7 @@ model, tokenizer = load_model_and_tokenizer()
 
 st.title("Генерация заголовков для новостных текстов")
 text = st.text_area(label="Введите текст новости:")
+st.write(text)
 result = st.button("Сгенерировать заголовок")
 
 if result:
