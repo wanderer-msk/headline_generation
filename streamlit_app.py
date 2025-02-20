@@ -20,13 +20,12 @@ model, tokenizer = load_model_and_tokenizer()
 
 st.title("Генерация заголовков для новостных текстов")
 text = st.text_area(label="Введите текст новости:")
-text = "В Северной столице несколько сотрудников одного из медучреждений покинули свои рабочие места. В четверг, 30 апреля, из Покровской больницы Петербурга уволились четверо врачей второго кардиологического отделения."
 result = st.button("Сгенерировать заголовок")
 
 if result:
     input = tokenize_text(tokenizer, text)
-    output = model.generate(model_input)
-    output_str = tokenizer.decode(model_output.squeeze(),
+    output = model.generate(input)
+    output_str = tokenizer.decode(output.squeeze(),
                                   skip_special_tokens=True)
     st.write("Заголовок:")
     st.write(output_str)
