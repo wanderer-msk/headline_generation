@@ -3,8 +3,8 @@ import torch
 from transformers import AutoTokenizer, T5ForConditionalGeneration
 
 def load_model_and_tokenizer():
-    model = T5ForConditionalGeneration.from_pretrained("IlyaGusev/rut5_base_headline_gen_telegram")
-    tokenizer = AutoTokenizer.from_pretrained("IlyaGusev/rut5_base_headline_gen_telegram")
+    model = T5ForConditionalGeneration.from_pretrained("wanderer-msk/ruT5-base_headline_generation")
+    tokenizer = AutoTokenizer.from_pretrained("wanderer-msk/ruT5-base_headline_generation")
 
     return model, tokenizer
 
